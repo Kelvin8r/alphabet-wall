@@ -11,7 +11,8 @@ CRGB leds[NUM_LEDS];
 
 #define UPDATES_PER_SECOND 100
 
-char my_str[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ JAKE SAM";
+// 
+char my_str[] = "GO AHEAD HAVE SOME CANDY";
 char colours[] = {'CRGB::Red', 'CRGB::Blue', 'CRGB::Green', 'CRGB::Orange', 'CRGB::Purple', 'CRGB::Yellow'};
 
 
@@ -23,8 +24,8 @@ void setup() {
 
 
 void loop() {
-    // WalkingIn(); 
-    SpeakMessage();
+    WalkingIn(); 
+    SpellMessage();
 }
 
 
@@ -58,15 +59,15 @@ void WalkingIn() {
                 break;
         }            
         FastLED.show();
-        delay(350);
+        delay(random(100,250);
 
         leds[i] = CRGB::Black;
         FastLED.show();
-        delay(500);
+        delay(50,150);
     }
 }
 
-void SpeakMessage() {
+void SpellMessage() {
     for(int i = 0; i < strlen(my_str); i++) {
         if(my_str[i] < 65 or my_str[i] > 90) {
             delay(750);
@@ -109,7 +110,7 @@ void SpeakMessage() {
             // reset led after flashing colour
             leds[my_char_int] = CRGB::Black;
             FastLED.show();
-            delay(500);
+            delay(300);
         }
     }
     delay(1500);
