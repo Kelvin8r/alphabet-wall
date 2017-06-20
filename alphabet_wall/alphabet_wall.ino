@@ -59,11 +59,11 @@ void WalkingIn() {
                 break;
         }            
         FastLED.show();
-        delay(random(100,250);
+        delay(random(100,250));
 
         leds[i] = CRGB::Black;
         FastLED.show();
-        delay(50,150);
+        delay(random(50,150));
     }
 }
 
